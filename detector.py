@@ -18,7 +18,7 @@ if template is None:
 main_gray = cv2.cvtColor(main_image, cv2.COLOR_BGR2GRAY)
 template_gray = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
 
-w, h = template_gray.shape[::-1]
+h, w = template_gray.shape
 
 result = cv2.matchTemplate(main_gray, template_gray, cv2.TM_CCOEFF_NORMED)
 
